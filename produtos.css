@@ -1,0 +1,102 @@
+/* ================= RESET BÁSICO ================= */
+body {
+  margin: 0; /* Remove a margem padrão do navegador */
+  font-family: 'Times New Roman', Times, serif; /* Define a fonte usada em todo o corpo da página */
+  background: #fff8d8; /* Cor de fundo rosa clara */
+  color: #333; /* Cor do texto cinza escuro */
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #ebdaa8; /* Cor de fundo verde claro para o cabeçalho */
+  padding: 1em 2em; /* Espaçamento interno: 1em em cima e embaixo, 2em nas laterais */
+  display: flex; /* Usa flexbox para organizar os elementos dentro do header */
+  justify-content: space-between; /* Distribui os elementos para as extremidades do header */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.logo { /* Estilo da área do logotipo */
+  padding: 10px; /* Espaçamento interno */
+}
+
+.ajustlogo{
+  width: 200px;
+  height: 100px;
+}
+
+nav ul {
+  list-style: none; /* Remove os marcadores padrão da lista */
+  display: flex; /* Organiza os itens da lista em linha usando flexbox */
+  gap: 1em; /* Espaço de 1em entre cada item da lista */
+  margin: 0; /* Remove a margem padrão da lista */
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Cor do texto cinza escuro para os links */
+  font-weight: bold; /* Deixa o texto dos links em negrito */
+}
+
+nav a.active {
+  border-bottom: 2px solid black; /* Adiciona uma linha preta abaixo do link ativo */
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 2em; /* Espaçamento interno de 2em em todas as direções */
+}
+
+section h1 {
+  font-size: 1.8em; /* Aumenta o tamanho da fonte do título */
+  margin-bottom: 2em; /* Espaço abaixo do título */
+  text-align: center; /* Centraliza o texto do título */
+}
+
+/* ================= CATALOGO ================= */
+.catalogo {
+  display: grid; /* Utiliza grid layout para organizar os itens */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Cria colunas que ocupam no mínimo 400px e se ajustam automaticamente */
+  gap: 2em; /* Espaçamento de 2em entre os itens da grade */
+  max-width: 1100px; /* Define a largura máxima do container */
+  margin: auto; /* Centraliza o container horizontalmente */
+}
+
+.item {
+  display: flex; /* Usa flexbox para alinhar o conteúdo do item */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  gap: 15px; /* Espaçamento de 15px entre os elementos internos */
+  max-width: 450px; /* Define largura máxima para cada item */
+  margin: auto; /* Centraliza cada item dentro do container */
+  background: #ebdaa8; /* Fundo branco para o item */
+  padding: 1em; /* Espaçamento interno de 1em */
+  border-radius: 10px; /* Bordas arredondadas com raio de 10px */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Sombra leve para dar profundidade */
+}
+
+.item img {
+  width: 150px; /* Largura fixa da imagem */
+  height: 150px; /* Altura fixa da imagem */
+  border-radius: 15px; /* Cantos arredondados da imagem */
+  object-fit: cover; /* Corta a imagem para cobrir todo o espaço sem distorcer */
+  border: 2px solid #aaa; /* Borda cinza ao redor da imagem */
+}
+
+.item h3 {
+  margin: 0; /* Remove margens padrão do título */
+  font-size: 18px; /* Define tamanho da fonte do título */
+  font-weight: bold; /* Deixa o título em negrito */
+}
+
+.item p {
+  font-size: 0.9em; /* Fonte um pouco menor para o parágrafo */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* ================= RODAPÉ ================= */
+footer {
+  background: #ebdaa8; /* Cor de fundo verde claro igual ao header */
+  text-align: center; /* Centraliza o texto dentro do rodapé */
+  padding: 1em; /* Espaçamento interno de 1em */
+  margin-top: 2em; /* Espaço acima do rodapé */
+  font-size: 14px; /* Fonte menor para o texto do rodapé */
+}

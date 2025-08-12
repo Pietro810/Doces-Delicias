@@ -1,0 +1,198 @@
+/* ================= RESET BÁSICO ================= */
+
+body { /* Estilização geral do corpo do site */
+  margin: 0; /* Remove margens padrão do navegador */
+  font-family: 'Times New Roman', Times, serif; /* Define a fonte do texto */
+  background: #fff8d8; /* Define cor de fundo rosada clara */
+  color: #333; /* Define cor do texto como cinza escuro */
+}
+
+/* ================= BANNER ================= */
+
+.banner{
+  display: flex; /*Ajuste de acordo com a disposição do espaço*/
+  align-items: center; /*Alinhar na vertical*/
+  justify-content: center; /*Alinhamento na horizontal*/
+}
+
+.banner img{
+  width: 70%; /*Largura*/
+}
+
+/* ================= HEADER ================= */
+header { /* Estilo do cabeçalho */
+  background: #ebdaa8; /* Define fundo verde claro */
+  padding: 1em 2em; /* Define espaçamento interno: 1em em cima/baixo, 2em laterais */
+  display: flex; /* Ativa o layout flexbox */
+  justify-content: space-between; /* Distribui os elementos para extremos opostos */
+  align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.logo { /* Estilo da área do logotipo */
+  padding: 10px; /* Espaçamento interno */
+}
+
+nav ul { /* Estilização da lista de navegação */
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Exibe itens lado a lado */
+  gap: 1em; /* Espaçamento entre os itens */
+  margin: 0; /* Remove margem padrão */
+}
+
+nav a { /* Estilo dos links de navegação */
+  text-decoration: none; /* Remove o sublinhado */
+  color: #333; /* Define cor cinza escura */
+  font-weight: bold; /* Negrito */
+}
+
+nav a.ativo, /* Quando link tem classe ativo */
+nav a.active { /* Ou classe active */
+  border-bottom: 2px solid black; /* Adiciona linha preta inferior */
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: #000; /* Define a cor do texto do link */
+}
+
+.ajustlogo {
+  width: 200px;  /* Define a largura da imagem/logo como 200 pixels */
+  height: 100px; /* Define a altura da imagem/logo como 100 pixels */
+}
+
+
+/* ================= SECTION ================= */
+section { 
+  padding: 2em; /* Adiciona espaçamento interno */
+}
+
+section h1 { 
+  font-size: 1.8em; /* Aumenta tamanho da fonte */
+  margin-bottom: 2em; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* ================= PÁGINA SOBRE ================= */
+.nossa-historia {
+  display: flex; /* Define o container como flexbox para organizar seus filhos em linha */
+  gap: 20px; /* Espaçamento de 20px entre os elementos filhos */
+  padding: 20px; /* Espaçamento interno de 20px em todos os lados */
+  max-width: 1200px; /* Largura máxima do container limitada a 1200 pixels */
+  margin: auto; /* Centraliza horizontalmente o container na página */
+}
+
+.nossa-historia .texto h1 {
+  text-align: center; /* Centraliza horizontalmente o título */
+  margin-bottom: 20px; /* Espaço abaixo do título para separar do conteúdo seguinte */
+}
+
+.nossa-historia .imagem img {
+  width: 600px; /* Define a largura fixa da imagem em 600 pixels */
+  height: 400px; /* Define a altura fixa da imagem em 400 pixels */
+  padding: 20px; /* Espaçamento interno ao redor da imagem */
+  border-radius: 30px; /* Bordas arredondadas com raio de 5 pixels */
+}
+
+
+/* ================= PÁGINA CONTATO ================= */
+.contato h1 { /* Título da página contato */
+  text-align: center; /* Centraliza texto */
+  margin-top: 1em; /* Espaço superior */
+}
+
+.subtexto { /* Texto abaixo do título */
+  text-align: center; /* Centraliza */
+  margin-bottom: 1em; /* Espaço inferior */
+}
+
+.contato form { /* Estilização do formulário */
+  max-width: 90%; /* Largura máxima 90% */
+  width: 600px; /* Largura fixa em telas grandes */
+  margin: auto; /* Centraliza */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Alinha itens em coluna */
+  gap: 1em; /* Espaçamento entre campos */
+}
+
+.contato form label { /* Rótulos do formulário */
+  display: block; /* Ocupa linha inteira */
+  margin: 0.5em 0 0.2em; /* Espaçamento vertical */
+}
+
+.contato form input,
+.contato form textarea { /* Campos de entrada */
+  width: 100%; /* Ocupa largura total */
+  padding: 0.7em; /* Espaçamento interno */
+  border: 1px solid #333; /* Borda preta */
+  border-radius: 0; /* Sem arredondamento */
+  background-color: white; /* Fundo branco */
+}
+
+.botao-container { /* Container do botão */
+  display: flex; /* Flexbox */
+  justify-content: flex-end; /* Alinha botão à direita */
+  margin-top: 1em; /* Espaçamento superior */
+}
+
+.contato form button { /* Botão do formulário */
+  padding: 0.6em 1.5em; /* Espaçamento interno */
+  border: 1px solid #333; /* Borda preta */
+  background-color: white; /* Fundo branco */
+  cursor: pointer; /* Cursor tipo mão */
+  transition: 0.3s; /* Animação suave no hover */
+}
+
+.contato form button:hover { /* Efeito hover */
+  background-color: #f8c1c1; /* Muda fundo para rosa */
+}
+
+/* ================= PRODUTOS ================= */
+
+.catalogo {
+  display: grid; /* Utiliza grid layout para organizar os itens */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Cria colunas que ocupam no mínimo 400px e se ajustam automaticamente */
+  gap: 5em; /* Espaçamento de 2em entre os itens da grade */
+  max-width: 1100px; /* Define a largura máxima do container */
+  margin: auto; /* Centraliza o container horizontalmente */
+}
+
+.item {
+  display: flex; /* Usa flexbox para alinhar o conteúdo do item */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  gap: 15px; /* Espaçamento de 15px entre os elementos internos */
+  max-width: 500px; /* Define largura máxima para cada item */
+  margin: auto; /* Centraliza cada item dentro do container */
+  background: #ebdaa8; /* Fundo branco para o item */
+  padding: 1em; /* Espaçamento interno de 1em */
+  border-radius: 10px; /* Bordas arredondadas com raio de 10px */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Sombra leve para dar profundidade */
+}
+
+.item img {
+  width: 250px; /* Largura fixa da imagem */
+  height: 250px; /* Altura fixa da imagem */
+  border-radius: 15px; /* Cantos arredondados da imagem */
+  object-fit: cover; /* Corta a imagem para cobrir todo o espaço sem distorcer */
+  border: 2px solid #aaa; /* Borda cinza ao redor da imagem */
+}
+
+.item h3 {
+  margin: 0; /* Remove margens padrão do título */
+  font-size: 20px; /* Define tamanho da fonte do título */
+  font-weight: bold; /* Deixa o título em negrito */
+}
+
+.item p {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+
+/* ================= RODAPÉ ================= */
+footer { /* Estilização do rodapé */
+  background: #ebdaa8; /* Fundo verde claro */
+  text-align: center; /* Centraliza texto */
+  padding: 1em; /* Espaçamento interno */
+  margin-top: 2em; /* Espaço superior */
+  font-size: 14px; /* Fonte menor */
+}
+
